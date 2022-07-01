@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/grey1"/>
+            <corners
+                android:bottomLeftRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:bottomRightRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:topLeftRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:topRightRadius="@dimen/background_text_input_edit_text_default_radius">
+            </corners>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_16"
+        android:layout_marginEnd="@dimen/normal_16"
+        android:padding="@dimen/normal_24"
+        android:background="@drawable/background_dialog_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/deletingResponseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:layout_marginTop="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/delete_response"
+            android:textColor="@color/black"
+            android:textSize="@dimen/deleting_response_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/cancellationCrossImageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cancellationCrossImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/deletingResponseText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/doYouReallyWantToDeleteResponseText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_20"
+            android:fontFamily="@font/weblysleekuil"
+            android:layout_marginEnd="@dimen/normal_14"
+            app:layout_goneMarginStart="@dimen/normal_26"
+            android:layout_marginStart="@dimen/normal_14"
+            android:text="@string/do_you_really_want_to_delete_response"
+            android:textColor="@color/gray_hint"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/deletingResponseText" />
+
+        <Button
+            android:id="@+id/confirmationDeletingResponseButton"
+            style="@style/Button.Default.Orange"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_56"
+            android:layout_marginTop="@dimen/default_orange_button_margin"
+            android:fontFamily="@font/weblysleekuisb"
+            android:letterSpacing=".0"
+            android:text="@string/confirm"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/doYouReallyWantToDeleteResponseText" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            style="@style/Button.Default.White.TextOnly"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_56"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/cancel"
+            android:textSize="@dimen/text_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmationDeletingResponseButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.bravedeveloper.sandbase.presentation.base.views.LabelBodyEditText
+        android:id="@+id/name_bank_edit_text"
+        style="@style/Widget.Sandbase.LabelBodyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_body_default_height"
+        android:inputType="text"
+        app:labelText="@string/bank_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.bravedeveloper.sandbase.presentation.base.views.LabelBodyEditText
+        android:id="@+id/bik_bank_edit_text"
+        style="@style/Widget.Sandbase.LabelBodyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_body_default_height"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/normal_24"
+        app:labelText="@string/bank_bik"
+        app:layout_constraintTop_toBottomOf="@id/name_bank_edit_text" />
+
+    <com.bravedeveloper.sandbase.presentation.base.views.LabelBodyEditText
+        android:id="@+id/korr_acc_edit_text"
+        style="@style/Widget.Sandbase.LabelBodyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_body_default_height"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/normal_24"
+        app:labelText="@string/korr_account"
+        app:layout_constraintTop_toBottomOf="@id/bik_bank_edit_text" />
+
+    <com.bravedeveloper.sandbase.presentation.base.views.LabelBodyEditText
+        android:id="@+id/checking_account_edit_text"
+        style="@style/Widget.Sandbase.LabelBodyEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/label_body_default_height"
+        android:inputType="number"
+        android:layout_marginTop="@dimen/normal_24"
+        app:labelText="@string/checking_account"
+        app:layout_constraintTop_toBottomOf="@id/korr_acc_edit_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

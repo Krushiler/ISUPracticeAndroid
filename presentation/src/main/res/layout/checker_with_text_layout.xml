@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:orientation="horizontal"
+    tools:parentTag="android.widget.LinearLayout">
+
+    <CheckBox
+        android:id="@+id/cwtl_CB"
+        style="@style/Widget.Sandbase.Checkbox"
+        android:layout_width="26dp"
+        android:layout_height="26dp" />
+
+    <TextView
+        android:id="@+id/cwtl_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/weblysleekuisb"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18" />
+
+</merge>

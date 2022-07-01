@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey1"
+        app:elevation="0dp">
+
+        <include
+            android:id="@+id/settings_toolbar"
+            layout="@layout/toolbar" />
+
+        <TextView
+            android:id="@+id/settings_label_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_24"
+            android:layout_marginTop="@dimen/small_10"
+            android:text="@string/notifications"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_28"
+            android:layout_marginBottom="@dimen/small_10"
+            app:layout_constraintTop_toBottomOf="@+id/settings_toolbar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey1"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notifications_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/no_notif_layout"
+        style="@style/CardViewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/no_notif_space"
+                android:layout_width="@dimen/card_view_side"
+                android:layout_height="@dimen/card_view_side"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/no_notification_img"
+                android:layout_width="@dimen/image_side"
+                android:layout_height="@dimen/image_side"
+                android:layout_marginBottom="@dimen/large_64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/no_notif" />
+
+            <TextView
+                android:id="@+id/no_notification_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_empty_top_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintEnd_toEndOf="@+id/no_notification_img"
+                app:layout_constraintStart_toStartOf="@+id/no_notification_img"
+                app:layout_constraintTop_toBottomOf="@+id/no_notification_img" />
+
+            <TextView
+                android:id="@+id/no_notification_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_8"
+                android:text="@string/notifications_empty_bottom_text"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintEnd_toEndOf="@+id/no_notification_img"
+                app:layout_constraintStart_toStartOf="@+id/no_notification_img"
+                app:layout_constraintTop_toBottomOf="@+id/no_notification_top_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

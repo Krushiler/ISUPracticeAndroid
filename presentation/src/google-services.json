@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960037970824",
+    "project_id": "sandbase-bb594",
+    "storage_bucket": "sandbase-bb594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960037970824:android:200dd1fded3ebe52f1103d",
+        "android_client_info": {
+          "package_name": "com.bravedeveloper.sandbase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960037970824-3rq2j46eastec6m7b7np8okthqj4fu7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvT9t2N4wURagDSPtdezolLfsaQCCZLhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960037970824-3rq2j46eastec6m7b7np8okthqj4fu7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

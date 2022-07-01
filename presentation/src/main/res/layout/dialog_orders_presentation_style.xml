@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/order_item_border_background"
+    android:paddingHorizontal="@dimen/normal_16"
+    android:paddingVertical="@dimen/normal_20">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/LabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:fontFamily="@font/weblysleekuisb"
+        android:text="@string/view"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radioButtonList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/list"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_marginTop="@dimen/normal_12" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_12"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/map"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_marginTop="@dimen/normal_12" />
+    </RadioGroup>
+
+    <Button
+        style="@style/Widget.Sandbase.Button.TextButton"
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReady"
+        app:layout_constraintTop_toTopOf="@+id/buttonReady"
+        android:text="@string/cancellation"
+        android:layout_marginEnd="@dimen/normal_32"/>
+
+    <Button
+        style="@style/Widget.Sandbase.Button.TextButton"
+        android:id="@+id/buttonReady"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/orange_dark"
+        android:text="@string/ready"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

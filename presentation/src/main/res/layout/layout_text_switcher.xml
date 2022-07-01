@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:checkedButton="@+id/offer"
+    android:id="@+id/text_switcher_radio_group"
+    android:layout_width="match_parent"
+    android:padding="@dimen/text_switcher_layout_padding"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background_text_switcher"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RadioButton
+        android:id="@+id/radioLeft"
+        android:background="@drawable/background_text_switcher_toggle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:textSize="@dimen/text_18"
+        android:fontFamily="@font/weblysleekuisb"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/ur_face"
+        android:textColor="@color/orange" />
+
+    <RadioButton
+        android:id="@+id/radioRight"
+        android:layout_width="0dp"
+        android:textSize="@dimen/text_18"
+        android:fontFamily="@font/weblysleekuisb"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/background_text_switcher_toggle"
+        android:button="@null"
+        android:gravity="center"
+        android:text="@string/physical_face"
+        android:textColor="@color/orange" />
+</RadioGroup>

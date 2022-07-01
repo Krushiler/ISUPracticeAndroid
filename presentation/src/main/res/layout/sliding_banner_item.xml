@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/slidingImage"
+            android:layout_width="@dimen/sliding_image_width"
+            android:layout_height="@dimen/sliding_image_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_sliding_image_1" />
+
+        <TextView
+            android:id="@+id/slidingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/sliding_text_margin_top"
+            android:gravity="center"
+            android:paddingLeft="@dimen/sliding_text_default_padding"
+            android:paddingRight="@dimen/sliding_text_default_padding"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slidingImage"
+            tools:text="@string/sliding_text_1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

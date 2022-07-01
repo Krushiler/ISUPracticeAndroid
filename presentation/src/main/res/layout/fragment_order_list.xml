@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey1"
+            app:elevation="0dp">
+
+            <include
+                android:id="@+id/included_toolbar"
+                layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:id="@+id/toolbar_registered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_24"
+                android:layout_marginTop="@dimen/small_10"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/orders_label_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/orders"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_28"
+                        app:layout_constraintTop_toBottomOf="@+id/included_toolbar" />
+
+                    <TextView
+                        android:id="@+id/orders_label_count_view"
+                        android:layout_width="@dimen/normal_30"
+                        android:layout_height="@dimen/normal_30"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/small_10"
+                        android:background="@drawable/background_order_list_count"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_16"
+                        app:layout_constraintTop_toBottomOf="@+id/included_toolbar"
+                        tools:text="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/seller_filter_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:layout_marginEnd="@dimen/normal_12">
+
+                    <ImageButton
+                        android:id="@+id/btn_filter_settings"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/normal_30"
+                        android:layout_height="@dimen/normal_30"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_filter_settings" />
+
+                    <ImageButton
+                        android:id="@+id/btn_kebab"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="@dimen/normal_30"
+                        android:layout_height="@dimen/normal_30"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_kebab_menu" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <LinearLayout
+                android:id="@+id/view_pager_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/grey1"
+                android:orientation="vertical">
+
+                <com.bravedeveloper.sandbase.presentation.base.views.TextSwitcher
+                    android:id="@+id/role_switcher"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_switcher_height"
+                    android:layout_marginStart="@dimen/normal_16"
+                    android:layout_marginTop="@dimen/normal_24"
+                    android:layout_marginEnd="@dimen/normal_16"
+                    android:visibility="gone"
+                    app:leftText="@string/buyer"
+                    app:rightPicked="false"
+                    app:rightText="@string/seller" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/order_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/orders_tab_layout"
+                        style="@style/Widget.Sandbase.TabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/large_40"
+                        android:layout_marginTop="@dimen/normal_30"
+                        app:tabIndicator="@drawable/background_active_tab"
+                        app:tabIndicatorColor="@color/orange_light"
+                        app:tabIndicatorGravity="stretch"
+                        app:tabMode="scrollable" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/order_button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_88"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/order_button"
+                    style="@style/Button.Default.Orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/large_64"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/normal_32"
+                    android:text="@string/place_an_order"
+                    android:textAllCaps="false"
+                    tools:ignore="TextContrastCheck" />
+            </FrameLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

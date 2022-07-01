@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <solid android:color="@color/grey1"/>
+            <corners
+                android:bottomLeftRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:bottomRightRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:topLeftRadius="@dimen/background_text_input_edit_text_default_radius"
+                android:topRightRadius="@dimen/background_text_input_edit_text_default_radius">
+            </corners>
+            <stroke android:width="1dp"
+                android:color="@color/grey3"/>
+        </shape>
+    </item>
+    <item android:state_focused="false" android:drawable="@drawable/background_label_edittext_editing"/>
+</selector>

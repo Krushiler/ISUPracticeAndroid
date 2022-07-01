@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey1"
+        app:elevation="0dp">
+
+        <include
+            android:id="@+id/seller_filter_toolbar_include"
+            layout="@layout/toolbar" />
+
+        <TextView
+            style="@style/LabelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/filter"
+            android:textSize="@dimen/text_20" />
+
+        <View style="@style/HorizontalDivider" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey1"
+        android:orientation="vertical"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/normal_16"
+            android:layout_marginTop="@dimen/afforded_item_margin_top_small"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:layout_weight="1"
+            app:layout_constraintBottom_toTopOf="@+id/bottom_layout_with_buttons">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey1"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/normal_24">
+
+                <Spinner
+                    android:id="@+id/sellerFilterTypeSP"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/background_filter_spinner"
+                    android:contentDescription="@string/filter"
+                    android:popupBackground="@drawable/background_filter_spinner_popup"
+                    android:popupTheme="@style/SpinnerDropDown"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/spinner_filter_seller_item" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_16"
+                    android:layout_marginBottom="@dimen/normal_16"
+                    android:background="@drawable/background_seller_filter_scroll_view"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/seller_materialTV"
+                        style="@style/Widget.Sandbase.CheckBox.Material.LightOrange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_24"
+                        android:layout_marginTop="@dimen/normal_18"
+                        android:fontFamily="@font/weblysleekuisb"
+                        android:gravity="center_vertical"
+                        android:text="@string/material"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_16"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/filter_checkbox_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/HorizontalDivider"
+                        android:layout_width="match_parent"
+                        android:layout_marginHorizontal="@dimen/normal_24"
+                        android:layout_marginVertical="@dimen/normal_20" />
+
+                    <TextView
+                        android:id="@+id/seller_offer_sizeTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/normal_24"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:fontFamily="@font/weblysleekuisb"
+                        android:gravity="center_vertical"
+                        android:text="@string/order_size"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_18"
+                        android:textStyle="bold" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_14">
+
+                        <com.bravedeveloper.sandbase.presentation.base.views.FromToInputTextView
+                            android:id="@+id/tv_min"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/normal_24"
+                            android:layout_marginEnd="@dimen/small_4"
+                            android:background="@drawable/background_input"
+                            app:fontFamily="@font/weblysleekuisb"
+                            app:fromToColor="@color/gray_dark"
+                            app:fromToText="FROM"
+                            app:inputColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/tv_max"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.bravedeveloper.sandbase.presentation.base.views.FromToInputTextView
+                            android:id="@+id/tv_max"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/small_4"
+                            android:layout_marginEnd="@dimen/normal_24"
+                            android:background="@drawable/background_input"
+                            app:fontFamily="@font/weblysleekuisb"
+                            app:fromToColor="@color/gray_dark"
+                            app:fromToText="TO"
+                            app:inputColor="@color/black"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@+id/tv_min"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:id="@+id/offer_size_range_slider"
+                        style="@style/Widget.Sandbase.RangeSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/small_2"
+                        android:layout_marginHorizontal="@dimen/normal_24"
+                        android:layout_marginTop="@dimen/afforded_item_margin_top_small" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resetSellerFilterBTN"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuisb"
+            android:minHeight="0dp"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            android:textColor="@color/gray_dark"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold"
+            app:rippleColor="@null" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/showSellerFilterBTN"
+            style="@style/Material.OrangeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/large_40"
+            android:layout_marginTop="@dimen/normal_32"
+            android:layout_marginBottom="@dimen/normal_16"
+            android:background="@drawable/background_orange_button"
+            android:backgroundTint="@color/orange_dark"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

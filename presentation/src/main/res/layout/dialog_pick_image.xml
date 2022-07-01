@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background"
+    android:padding="@dimen/normal_24">
+
+    <TextView
+        android:id="@+id/choosePhotoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/weblysleekuisb"
+        android:text="@string/choose_photo"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_20"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/choosePhotoCamera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/weblysleekuil"
+        android:paddingVertical="@dimen/normal_24"
+        android:text="@string/photo_take_from_camera"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosePhotoTextView" />
+
+    <TextView
+        android:id="@+id/choosePhotoGallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:fontFamily="@font/weblysleekuil"
+        android:paddingVertical="@dimen/normal_24"
+        android:text="@string/photo_pick_from_gallery"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_18"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosePhotoCamera" />
+
+    <Button
+        android:id="@+id/choosePhotoCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_16"
+        android:background="?selectableItemBackground"
+        android:text="@string/cancel"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosePhotoGallery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

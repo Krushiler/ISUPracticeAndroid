@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include
+        android:id="@+id/order_info_toolbar"
+        layout="@layout/toolbar" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/order_info_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey1"
+        android:backgroundTint="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_info_toolbar"
+        app:tabGravity="start"
+        app:tabIndicator="@drawable/tab_indicator"
+        app:tabIndicatorColor="@color/tabs_color_state_list"
+        app:tabIndicatorFullWidth="false"
+        app:tabMode="scrollable"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabTextColor="@color/tabs_color_state_list" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/grey1"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_info_toolbar" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/white_dark"
+        android:elevation="-1dp"
+        app:layout_constraintBottom_toBottomOf="@id/order_info_tab_layout"
+        app:layout_constraintStart_toStartOf="@id/order_info_tab_layout" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/order_info_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/order_info_tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

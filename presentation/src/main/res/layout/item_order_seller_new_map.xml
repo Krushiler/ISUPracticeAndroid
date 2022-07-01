@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_item_border_background"
+    android:orientation="vertical"
+    android:padding="@dimen/normal_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_40"
+            android:fontFamily="@font/weblysleekuisb"
+            android:textColor="@color/darkPurple1"
+            android:textSize="@dimen/order_recycler_title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Желтый песок, 8 тонн" />
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/order_recycler_title_text_size"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:layout_marginTop="@dimen/small_4"
+            android:src="@drawable/ic_geo_mini" />
+
+        <TextView
+            android:id="@+id/tvGeolocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="Камбарская улица, 25, Ижевск, Удмурсткая Республика" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:src="@drawable/ic_time_mini" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="28 сентября, 08:00-14:00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:layout_marginTop="@dimen/small_4"
+            android:src="@drawable/ic_commentary_mini" />
+
+        <com.bravedeveloper.sandbase.presentation.notifications.affordedOrder.ExpandableTextView
+            android:id="@+id/tvCommentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:gravity="center_vertical"
+            android:hint="@string/no_order_comment"
+            android:paddingTop="@dimen/small_4"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey5"
+            android:textSize="@dimen/text_18" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_48"
+        android:layout_marginStart="@dimen/small_4"
+        android:layout_marginTop="@dimen/normal_16"
+        android:layout_marginEnd="@dimen/small_4"
+        android:layout_marginBottom="@dimen/small_4"
+        android:background="@drawable/order_bottom_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/respond"
+        android:textAllCaps="false"
+        android:textColor="@color/orange_dark"
+        android:textSize="@dimen/text_16">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/respondButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/weblysleekuisb"
+            android:gravity="center"
+            android:letterSpacing=".0"
+            android:text="@string/respond"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/respond_button_text_color"
+            android:textSize="@dimen/text_18" />
+
+    </RelativeLayout>
+</LinearLayout>

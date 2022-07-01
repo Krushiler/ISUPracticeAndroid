@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/spinner_item_height"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="5dp">
+
+    <ImageView
+        android:id="@+id/filterTypeImage"
+        android:layout_width="@dimen/normal_18"
+        android:layout_height="@dimen/normal_12"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/normal_26"
+        android:src="@drawable/ic_filter_image"
+        app:tint="@color/grey3" />
+
+    <TextView
+        android:id="@+id/filterTypeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/normal_18"
+        android:layout_toRightOf="@id/filterTypeImage"
+        android:fontFamily="@font/weblysleekuisb"
+        android:text="@string/select_filter"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/text_14" />
+
+    <ImageView
+        android:id="@+id/filterSpinnerArrow"
+        android:layout_width="@dimen/small_10"
+        android:layout_height="@dimen/small_6"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/normal_30"
+        android:src="@drawable/ic_filter_arrow"
+        app:tint="@color/gray_dark" />
+</RelativeLayout>

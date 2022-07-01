@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/orderRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/large_88"
+        android:background="@color/grey1"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/normal_16"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/no_order_layout"
+        style="@style/CardViewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/large_40">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/no_order_space"
+                android:layout_width="@dimen/card_view_side"
+                android:layout_height="@dimen/card_view_side"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/no_order_img"
+                android:layout_width="@dimen/image_side"
+                android:layout_height="@dimen/image_side"
+                android:layout_marginBottom="@dimen/large_64"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_order_list_empty" />
+
+            <TextView
+                android:id="@+id/no_order_top_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/empty"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintEnd_toEndOf="@+id/no_order_img"
+                app:layout_constraintStart_toStartOf="@+id/no_order_img"
+                app:layout_constraintTop_toBottomOf="@+id/no_order_img" />
+
+            <TextView
+                android:id="@+id/no_order_bottom_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_8"
+                android:text="@string/no_orders"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintEnd_toEndOf="@+id/no_order_img"
+                app:layout_constraintStart_toStartOf="@+id/no_order_img"
+                app:layout_constraintTop_toBottomOf="@+id/no_order_top_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

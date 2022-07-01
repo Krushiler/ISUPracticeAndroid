@@ -1,0 +1,266 @@
+<resources>
+    <string name="app_name">SandBase</string>
+    <string name="skip">Пропустить</string>
+    <string name="next">Далее</string>
+    <string name="start">Начать</string>
+    <string name="sliding_text_1">Оставьте заявку на нужный материал, выберите удобную дату</string>
+    <string name="sliding_text_2">Получайте предложения от продавцов</string>
+    <string name="sliding_text_3">Выбирайте подходящий заказ с лучшей ценой</string>
+    <string name="sliding_text_4">Храните историю заказов в одном месте</string>
+    <string name="sign_in">Войти</string>
+    <string name="sign_in_for_switch_button">Вход</string>
+    <string name="sign_up">Зарегистрироваться</string>
+    <string name="sign_up_for_switch_button">Регистрация</string>
+    <string name="vendor">Продавец</string>
+    <string name="customer">Покупатель</string>
+    <string name="privacy_policy">Нажимая на кнопку, соглашаюсь на обработку персональных данных в соответствии с положениями
+        <a href="http://sandbase.ru/personal">Политики конфиденциальности</a></string>
+    <string name="full_name">ФИО</string>
+    <string name="provide_full_name">Введите ФИО</string>
+    <string name="full_name_head">ФИО руководителя</string>
+    <string name="place_an_order">Оформить заказ</string>
+    <string name="respond">Откликнуться</string>
+    <string name="notifications">Уведомления</string>
+    <string name="phone">Телефон</string>
+    <string name="password">Пароль</string>
+    <string name="password_forgot">Забыли пароль?</string>
+    <string name="type_password">Введите пароль</string>
+    <string name="type_password_again">Введите повторно</string>
+    <string name="no_order_comment">Комментарий к заказу отсутствует</string>
+    <string name="responses">Отклики</string>
+    <string name="notifications_empty_top_text">Здесь ничего нет</string>
+    <string name="notifications_empty_bottom_text">У вас нет новых уведомлений</string>
+    <string name="details">Детали</string>
+    <string name="date_and_time">Дата и время</string>
+    <string name="address">Адрес</string>
+    <string name="comment">Комментарий</string>
+    <string name="cancel_order">Отменить заказ</string>
+    <string name="filter">Фильтр</string>
+    <string name="reset">Сбросить все фильтры</string>
+    <string name="show">Показать</string>
+    <string name="select_filter">Выберите фильтр</string>
+    <string name="material">Материал</string>
+    <string name="carrier_sand">Песок карьерный</string>
+    <string name="gravel">Гравий</string>
+    <string name="order_size"><font size="14">Объём заказа</font></string>
+    <string name="order_sort_method_price">По стоимости</string>
+    <string name="order_sort_method_rating">По рейтингу</string>
+    <string name="order_sort_method_popularity">По популярности</string>
+    <string name="my_account">Мой аккаунт</string>
+    <string name="company_data">Данные о компании</string>
+    <string name="physical_face">Физ. лицо</string>
+    <string name="ur_face">Юр. лицо</string>
+    <string name="call">Позвонить</string>
+    <string name="checking_account">Расчётный счёт</string>
+    <string name="surname_name_patronymic">ФИО</string>
+    <string name="email">E-mail</string>
+    <string name="provide_email">Введите E-mail</string>
+    <string name="telephone">Телефон</string>
+    <string name="provide_telephone">Введите номер телефона</string>
+    <string name="password_changed">Пароль изменён</string>
+    <string name="days_ago">дней назад</string>
+    <string name="responses_limit">Лимит откликов в день</string>
+    <string name="responses_count">%d/%d</string>
+    <string name="want_to_create_offers">Хочу размещать заказы</string>
+    <string name="edit_data">Редактировать данные</string>
+    <string name="order">Заказ</string>
+    <string name="error_find_location">Невозможно найти адрес</string>
+    <string name="error_conection">Ошибка передачи данных. Проверьте подключение к интернету</string>
+    <string name="family_name_fatherity_company">Фамилия, Имя, Отчество (Руководителя)</string>
+    <string name="company_name">Название компании</string>
+    <string name="inn">ИНН</string>
+    <string name="kpp">КПП</string>
+    <string name="orgn">ОРГН</string>
+    <string name="nds">НДС</string>
+    <string name="company_adress">Адрес компании</string>
+    <string name="no_order_comment_otklik">Комментарий к отклику отсутствует</string>
+    <string name="no_order_comment_buyer">Комментарий покупателя отсутствует</string>
+    <string name="no_order_comment_just">Нет комментария</string>
+    <string name="afforded_order">Одобренный отклик</string>
+    <string name="expand">еще</string>
+    <string name="response">Отклик</string>
+    <string name="status">Статус</string>
+    <string name="material_and_volume">Материал</string>
+    <string name="rating">Рейтинг пользователя</string>
+    <string name="rating_placeholder">3/5</string>
+    <string name="price">Стоимость</string>
+    <string name="my_comment">Комментарий</string>
+    <string name="no_comment">Нет комментария</string>
+    <string name="delete_response">Удалить отклик</string>
+    <string name="your_response_has_not_yet_been_confirmed">Ваш отклик ещё не подтверждён</string>
+    <string name="you_have_not_yet_left_a_response">Вы ещё не оставили отклик</string>
+    <string name="deleting_the_response">Удаление отклика</string>
+    <string name="deleting_the_order">Удаление заказа</string>
+    <string name="delete_order">Удалить заказ</string>
+    <string name="remove_order">Отменить заказ</string>
+    <string name="do_you_really_want_to_delete_response">Вы действительно хотите удалить отклик?</string>
+    <string name="do_you_really_want_to_remove_order">Вы действительно хотите отменить заказ?</string>
+    <string name="do_you_really_want_to_delete_order">Вы действительно хотите удалить заказ навсегда?</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="cancel">Отменить</string>
+    <string name="choose_photo">Выбрать фото</string>
+    <string name="delete_photo">Удалить фото</string>
+    <string name="current_password">Текущий пароль</string>
+    <string name="new_password">Новый пароль</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="save">Сохранить</string>
+    <string name="delete_account">Удалить аккаунт </string>
+    <string name="settings">Настройки</string>
+    <string name="bank_name">Название банка</string>
+    <string name="bank_bik">БИК Банка</string>
+    <string name="korr_account">Корр. счёт</string>
+    <string name="notification_type">Виды оповещений</string>
+    <string name="checkout_map_number_picker_font">weblysleekuil</string>
+    <string name="notification_approve">Уведомление об одобрении отклика</string>
+    <string name="notification_reject">Уведомление об отмене заказа покупателем</string>
+    <string name="notification_reject_buyer">Уведомление об отмене заказа продавцом</string>
+    <string name="notification_new_order">Уведомление о новом заказе</string>
+    <string name="notification_new_order_buyer">Уведомление о новом отклике</string>
+    <string name="notification_frequency">Частота оповещений</string>
+    <string name="notification_momentary">Моментально</string>
+    <string name="notification_per_hour">Раз в час</string>
+    <string name="notification_per_4_hours">Раз в 4 часа</string>
+    <string name="notification_per_day">Раз в день</string>
+    <string name="notification_actual_cities">Актуальные города</string>
+    <string name="notification_cities_not_picked">Города не выбраны</string>
+    <string name="notification_setting">Оповещения</string>
+    <string name="input_code">Введите код, отправленный на ваш номер, для подтверждения удаления аккаунта</string>
+    <string name="code_from_sms">Код из смс</string>
+    <string name="delete_my_account">Удалить мой аккаунт</string>
+    <string name="btn_close_symbol">X</string>
+    <string name="afforded_order_price">Итого: %s руб.</string>
+    <string name="enter_the_code_sent_to_your_number">Введите код, отправленный на ваш номер, для подтверждения удаления аккаунта</string>
+    <string name="sign_out">Выйти</string>
+    <string name="orders">Заказы</string>
+    <string name="change_material">Выбрать материал</string>
+    <string name="undertype">Подтип</string>
+    <plurals name="tonns">
+        <item quantity="zero">ТОНН</item>
+        <item quantity="one">ТОННА</item>
+        <item quantity="two">ТОННЫ</item>
+        <item quantity="few">ТОННЫ</item>
+        <item quantity="many">ТОНН</item>
+        <item quantity="other">ТОНН</item>
+    </plurals>
+    <string name="cube_meters">КУБ.М</string>
+    <string name="size"><font size="36">Объём</font></string>
+    <string name="checkout">Оформить</string>
+    <string name="letters_left">символов осталось</string>
+    <string name="leave_response">Оставить отклик </string>
+    <string name="cost">Стоимость, в рублях</string>
+    <string name="comment_optional">Комментарий (необязательно)</string>
+    <string name="active_orders">Активные</string>
+    <string name="new_orders">Новые</string>
+    <string name="active_order">Активный</string>
+    <string name="in_process">В процессе</string>
+    <string name="exec_orders">На исполнении</string>
+    <string name="cancelled">Закрыт</string>
+    <string name="closed">Отменён</string>
+    <string name="done">Завершён</string>
+    <string name="on_moderation">На модерации</string>
+    <string name="no_data">Нет данных</string>
+    <string name="approve">Одобрить</string>
+    <string name="approved">Одобренные</string>
+    <string name="new_responce">Новый отклик</string>
+    <string name="for_email_message">На указанный адрес эл. почты придёт письмо с подтверждением</string>
+    <string name="new_unsign">Новые не залогиненный пользователь</string>
+    <string name="evaluating_orders">На оценке</string>
+    <string name="cancelled_orders">Отменённые</string>
+    <string name="completed_orders">Завершённые</string>
+    <string name="my_response">Мой отклик</string>
+    <string name="my_responses">Мои отклики</string>
+    <string name="password_recovery">Восстановление пароля</string>
+    <string name="reset_current_password">Сбросить текущий пароль</string>
+    <string name="password_sent_to_phone">Введите номер телефона, чтобы сбросить текущий пароль.\nНа указанный номер будет отправлен новый пароль</string>
+    <string name="photo_pick_from_gallery">Выбрать из галереи</string>
+    <string name="photo_take_from_camera">Сделать фото</string>
+    <string name="rubbles_short">руб.</string>
+    <string name="must_be_filled">Необходимо заполнить</string>
+    <string name="invalid_number">Некорректный номер</string>
+    <string name="incorrect_data">Неверные данные</string>
+    <string name="letters_digits">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZабвгдеёжзийклмнопрстуфхцчшщъыьэюяАБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ\u0020</string>
+    <string name="number_digits">1234567890-()+\u0020</string>
+    <string name="password_from_sms">Временный пароль из СМС</string>
+    <string name="password_sent">Временный пароль отправлен на указанный номер. После входа смените пароль в личном кабинете</string>
+    <string name="seller">Продавец</string>
+    <string name="buyer">Покупатель</string>
+    <string name="receiving_hours_morning">с 8 до 14ч.</string>
+    <string name="receiving_hours_evening">с 14 до 20ч.</string>
+    <string name="time">Время</string>
+    <string name="view">Вид</string>
+    <string name="list">Список</string>
+    <string name="map">Карта</string>
+    <string name="ready">Готово</string>
+    <string name="cancellation">Отмена</string>
+    <string name="tonns_switch">ТОННЫ</string>
+    <string-array name="months_after_day">
+        <item>января</item>
+        <item>февраля</item>
+        <item>марта</item>
+        <item>апреля</item>
+        <item>мая</item>
+        <item>июня</item>
+        <item>июля</item>
+        <item>августа</item>
+        <item>сентября</item>
+        <item>октября</item>
+        <item>ноября</item>
+        <item>декабря</item>
+    </string-array>
+    <string name="ago">назад</string>
+    <plurals name="hours_ago">
+        <item quantity="zero">часов</item>
+        <item quantity="one">час</item>
+        <item quantity="two">часа</item>
+        <item quantity="few">часа</item>
+        <item quantity="many">часов</item>
+        <item quantity="other">часов</item>
+    </plurals>
+    <plurals name="minutes_ago">
+        <item quantity="zero">минут</item>
+        <item quantity="one">минута</item>
+        <item quantity="two">минуты</item>
+        <item quantity="few">минуты</item>
+        <item quantity="many">минут</item>
+        <item quantity="other">минут</item>
+    </plurals>
+    <plurals name="seconds_ago">
+        <item quantity="zero">секунд</item>
+        <item quantity="one">секунда</item>
+        <item quantity="two">секунды</item>
+        <item quantity="few">секунды</item>
+        <item quantity="many">секунд</item>
+        <item quantity="other">секунд</item>
+    </plurals>
+    <plurals name="days_ago">
+        <item quantity="zero">дней</item>
+        <item quantity="one">день</item>
+        <item quantity="two">дня</item>
+        <item quantity="few">дня</item>
+        <item quantity="many">дней</item>
+        <item quantity="other">дней</item>
+    </plurals>
+    <string name="approve_reply">Одобрить отклик?</string>
+
+    <string name="notification_channel_id_default">Default</string>
+    <string name="notification_channel_id_default_name">Новый заказ</string>
+
+    <string name="from">от</string>
+    <string name="to">до</string>
+    <string name="apply">Применить</string>
+    <string name="response_money_amount">Итого: %1$s Руб</string>
+    <string name="empty">Здесь пусто</string>
+    <string name="no_orders">У вас пока нет заказов</string>
+    <string name="measurement_unit">Единица\nизмерения</string>
+    <string name="comment_max_120_length"><font size="14">Комментарий в несколько строк, но не более 120 символов</font></string>
+    <string name="account_deleted">Аккаунт удален</string>
+    <string name="wrong_code">Неправильный код</string>
+    <string name="error_occurred">Произошла ошибка</string>
+    <string name="leave_feedback">Оставить отзыв</string>
+    <string name="if_order_delivered">Доставлен ли заказ?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="evaluate_seller">Оцените продавца</string>
+    <string name="evaluate_buyer">Оцените покупателя</string>
+    <string name="send">Отправить</string>
+</resources>

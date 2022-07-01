@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default dimens -->
+    <dimen name="small_1">1dp</dimen>
+    <dimen name="small_2">2dp</dimen>
+    <dimen name="small_4">4dp</dimen>
+    <dimen name="small_6">6dp</dimen>
+    <dimen name="small_8">8dp</dimen>
+    <dimen name="small_10">10dp</dimen>
+    <dimen name="normal_12">12dp</dimen>
+    <dimen name="normal_14">14dp</dimen>
+    <dimen name="normal_18">18dp</dimen>
+    <dimen name="normal_16">16dp</dimen>
+    <dimen name="normal_20">20dp</dimen>
+    <dimen name="normal_22">22dp</dimen>
+    <dimen name="normal_24">24dp</dimen>
+    <dimen name="normal_26">26dp</dimen>
+    <dimen name="normal_28">28dp</dimen>
+    <dimen name="normal_30">30dp</dimen>
+    <dimen name="normal_32">32dp</dimen>
+    <dimen name="normal_36">36dp</dimen>
+    <dimen name="large_40">40dp</dimen>
+    <dimen name="large_44">44dp</dimen>
+    <dimen name="large_48">48dp</dimen>
+    <dimen name="large_52">52dp</dimen>
+    <dimen name="large_56">56dp</dimen>
+    <dimen name="large_64">64dp</dimen>
+    <dimen name="large_80">80dp</dimen>
+    <dimen name="large_88">88dp</dimen>
+    <dimen name="large_100">100dp</dimen>
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_16">16sp</dimen>
+    <dimen name="text_18">18sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_24">24sp</dimen>
+    <dimen name="text_28">28sp</dimen>
+    <dimen name="text_40">40sp</dimen>
+    <!-- Components of sliding banner item -->
+    <dimen name="sliding_image_width">240dp</dimen>
+    <dimen name="sliding_image_height">220dp</dimen>
+    <dimen name="sliding_text_margin_top">12dp</dimen>
+    <dimen name="sliding_text_default_padding">20dp</dimen>
+    <!-- Components of ViewPager and CircleIndicator -->
+    <dimen name="view_pager_margin_top">230dp</dimen>
+    <dimen name="view_pager_height">280dp</dimen>
+    <dimen name="indicator_radius">10dp</dimen>
+    <dimen name="circle_indicator_height">14dp</dimen>
+    <!-- Components of SandBase logo -->
+    <dimen name="sandbase_logo_width">180dp</dimen>
+    <dimen name="sandbase_logo_height">30dp</dimen>
+    <dimen name="sandbase_logo_margin_top">90dp</dimen>
+    <!-- Components of SandBase logo in splash screen -->
+    <dimen name="sandbase_logo_in_splash_screen_bottom">50dp</dimen>
+    <dimen name="sandbase_logo_in_splash_screen_width">220dp</dimen>
+    <dimen name="sandbase_logo_in_splash_screen_height">40dp</dimen>
+    <!-- Components of other components sliding fragment banners -->
+    <dimen name="skip_banners_text_default_margin">16dp</dimen>
+    <!-- Ring shape components -->
+    <dimen name="ring_thickness">-16dp</dimen>
+    <!-- Transparent button components -->
+    <dimen name="background_transparent_button_radius">30dp</dimen>
+    <dimen name="background_transparent_button_circle">1dp</dimen>
+    <!-- Text input edit text components -->
+    <dimen name="background_text_input_edit_text_default_radius">16dp</dimen>
+    <dimen name="text_input_edit_text_default_padding">20dp</dimen>
+    <dimen name="text_input_edit_text_small_padding">10dp</dimen>
+    <!-- Tab components -->
+    <dimen name="tab_layout_height">42dp</dimen>
+    <dimen name="tab_item_default_padding">32dp</dimen>
+    <dimen name="tab_item_text_size">18sp</dimen>
+    <!-- Orange button components -->
+    <dimen name="background_orange_button_default_radius">4dp</dimen>
+    <dimen name="default_orange_button_height">56dp</dimen>
+    <dimen name="default_orange_button_margin">16dp</dimen>
+    <!-- Checkbox layout items components -->
+    <dimen name="checkbox_layout_Items_default_margin">8dp</dimen>
+    <dimen name="checkbox_image_default_margin">16dp</dimen>
+    <dimen name="checkbox_image_default_size">26dp</dimen>
+    <!-- Privacy policy text view components -->
+    <dimen name="privacy_policy_default_padding">20dp</dimen>
+    <dimen name="privacy_policy_text_size">13sp</dimen>
+    <!-- Components of bottom bar -->
+    <dimen name="bottom_layout_with_buttons_size">75dp</dimen>
+    <dimen name="order_bottom_button_background_radius">4dp</dimen>
+    <!-- Components orders recycler view -->
+    <dimen name="horizontal_offer_item_margin">16dp</dimen>
+    <dimen name="vertical_offer_item_margin">4dp</dimen>
+    <dimen name="order_recycler_title_text_size">20sp</dimen>
+    <!-- Registration screen components -->
+    <dimen name="registration_button_default_marginLeft">170dp</dimen>
+    <dimen name="registration_button_default_marginRight">174dp</dimen>>
+    <dimen name="registration_button_padding">12dp</dimen>
+    <!-- Forgot password components -->
+    <dimen name="forgot_password_margin_top">270dp</dimen>
+    <dimen name="forgot_password_margin_start">48dp</dimen>
+    <!-- Components of order details -->
+    <dimen name="text_input_margin">16dp</dimen>
+    <dimen name="corner_radius_for_text_field">6dp</dimen>
+    <!-- Spinner components -->
+    <dimen name="spinner_item_height">40dp</dimen>
+    <!-- Dimension of TabLayout   -->
+    <dimen name="tab_item_spacing">20dp</dimen>
+    <!-- Dimension of TextSwitcher   -->
+    <dimen name="text_switcher_height">40dp</dimen>
+    <dimen name="text_switcher_layout_padding">2dp</dimen>
+    <dimen name="text_switcher_background_radius">16dp</dimen>
+    <!-- Dimension of LabelBody   -->
+    <dimen name="label_body_default_height">80dp</dimen>
+    <dimen name="label_body_default_label_size">12sp</dimen>
+    <!-- Dimension of CircularProgressIndicator   -->
+    <dimen name="circular_progress_radius">60dp</dimen>
+    <dimen name="circular_progress_text_size">24sp</dimen>
+    <!-- Dimension of Afforded Order Item -->
+    <dimen name="afforded_item_margin_top_small">8dp</dimen>
+    <dimen name="image_textview_margin_end">12dp</dimen>
+    <dimen name="image_textview_size">24dp</dimen>
+    <!-- Components of order info item -->
+    <dimen name="order_info_item_title_text_size">16sp</dimen>
+    <dimen name="order_info_item_description_text_size">19sp</dimen>
+    <dimen name="default_order_info_item_margin">16dp</dimen>
+    <!-- Components of alert dialog deleting response -->
+    <dimen name="deleting_response_text_size">22sp</dimen>
+    <!-- Dimension of CirclePhoto   -->
+    <dimen name="circle_size">100dp</dimen>
+    <dimen name="circle_size_radius">50dp</dimen>
+    <dimen name="circle_photo_mini_size">32dp</dimen>
+    <dimen name="circle_photo_mini_size_radius">16dp</dimen>
+    <!--Components of Customizable NumberPicker-->
+    <dimen name="number_picker_height">150dp</dimen>
+    <!--Dimension of dialogs    -->
+    <dimen name="dialog_width">350dp</dimen>
+    <dimen name="dialog_height">350dp</dimen>
+    <dimen name="dialog_padding">15dp</dimen>
+    <!--Dimension of burger menu buttons    -->
+    <dimen name="burger_button_height">75dp</dimen>
+   <!-- Dimension of divider-->
+    <dimen name="divider_height">1dp</dimen>
+    <!--Dimension of InfoItemView-->
+    <integer name="info_item_view_max_ems">120</integer>
+    <!--Max length of phone number-->
+    <integer name="number_max_length">18</integer>
+    <integer name="info_item_view_password_max_ems">21</integer>
+    <!--Max length of full name-->
+    <integer name="max_full_name_length">40</integer>
+    <!--Max width of afforded order field-->
+    <dimen name="max_afforded_order_field_width">200dp</dimen>
+    <!--Dimension of No-Info Notification CardView-->
+    <dimen name="image_side">150dp</dimen>
+    <dimen name="card_view_side">300dp</dimen>
+    <dimen name="large_card_view_side">350dp</dimen>
+    <!--Dimension of Bottom Sheet -->
+    <dimen name="bottom_sheet_peek_height">96dp</dimen>
+    <dimen name="picker_text_large_height">40sp</dimen>
+    <dimen name="stars_end_margin">5dp</dimen>
+</resources>

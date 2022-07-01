@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_field_title"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:passwordToggleTint="@color/grey5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/weblysleekuil"
+        android:hint="@string/password"
+        android:textColorHint="@color/grey5"
+        android:gravity="bottom"
+        android:theme="@style/Theme.SandBase.TextInputEditText"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_field_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:inputType="textMultiLine"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:textSize="@dimen/text_18" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

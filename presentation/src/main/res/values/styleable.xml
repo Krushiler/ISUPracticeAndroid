@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CheckBoxWithTextView">
+        <attr name="android:text" />
+        <attr name="android:checked" />
+        <attr name="android:textColor"/>
+        <attr name="android:fontFamily"/>
+    </declare-styleable>
+
+    <declare-styleable name="TextSwitcher">
+        <attr name="leftText" format="string"/>
+        <attr name="rightText" format="string"/>
+        <attr name="rightPicked" format="boolean"/>
+        <attr name="android:drawableRight"/>
+        <attr name="android:drawableLeft"/>
+    </declare-styleable>
+
+    <declare-styleable name="LabelBodyEditText">
+        <attr name="labelText" format="string"/>
+        <attr name="bodyText" format="string"/>
+        <attr name="android:background"/>
+        <attr name="editBackground" format="reference|color"/>
+        <attr name="editTextColor" format="color"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textColorHint"/>
+        <attr name="android:labelTextSize"/>
+        <attr name="android:textSize"/>
+        <attr name="android:inputType"/>
+        <attr name="android:state_focused"/>
+    </declare-styleable>
+
+    <declare-styleable name="ButtonWithImageView">
+        <attr name="android:text"/>
+        <attr name="android:src"/>
+        <attr name="android:textColor"/>
+        <attr name="android:gravity"/>
+    </declare-styleable>
+
+    <declare-styleable name="StarRateView">
+        <attr name="rating" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="AdditionalInfoView">
+        <attr name="sertificated" format="boolean"/>
+        <attr name="money" format="boolean"/>
+        <attr name="approved" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="FromToInputTextView">
+        <attr name="fromToColor" format="color"/>
+        <attr name="inputColor" format="color"/>
+        <attr name="android:background"/>
+        <attr name="fontFamily"/>
+        <attr name="fromToText" format="enum">
+            <enum name="FROM" value="0"/>
+            <enum name="TO" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="InfoItemView">
+        <attr name="titleText" format="string"/>
+        <attr name="descriptionText" format="string"/>
+        <attr name="descriptionIsEditable" format="boolean"/>
+        <attr name="disabledStyle" format="boolean"/>
+        <attr name="hiddenStyle" format="boolean"/>
+        <attr name="dividerIsVisible" format="boolean"/>
+        <attr name="maxEms" format="integer"/>
+        <attr name="android:inputType"/>
+        <attr name="android:hint"/>
+        <attr name="android:digits"/>
+        <attr name="descriptionTextSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DisableInputLayout">
+        <attr name="textColorDisabled" format="color"/>
+        <attr name="isEnabledToType" format="boolean"/>
+    </declare-styleable>
+
+</resources>

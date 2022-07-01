@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/approvingReplyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/approve_reply"
+            android:textColor="@color/grey4"
+            android:textSize="@dimen/deleting_response_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cancellationCrossImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/approvingReplyText"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/weblysleekuil"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/approvingReplyText" />
+
+        <TextView
+            android:id="@+id/commentaryTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/weblysleekuil"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirmationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_orange_button_margin"
+            android:layout_marginTop="@dimen/default_orange_button_margin"
+            android:layout_marginRight="@dimen/default_orange_button_margin"
+            android:background="@drawable/background_orange_button"
+            android:fontFamily="@font/weblysleekuisb"
+            android:letterSpacing=".0"
+            android:text="@string/confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/orange_button_text_color"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/commentaryTextView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_orange_button_margin"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="@dimen/default_orange_button_margin"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:fontFamily="@font/weblysleekuisb"
+            android:letterSpacing=".0"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/unselected_transparent_button_text_color"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirmationButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

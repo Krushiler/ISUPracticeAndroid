@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/normal_16"
+    android:layout_marginTop="@dimen/normal_20">
+
+    <TextView
+        android:id="@+id/info_title"
+        style="@style/InfoItemView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dark_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ФИО" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/info_description"
+        style="@style/InfoItemView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/normal_24"
+        android:layout_marginTop="@dimen/small_8"
+        android:background="@color/transparent"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_title"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:clickable="true"
+        tools:hint="Введите ФИО" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rating_bar_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_8"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_title">
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_40"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="2.5"
+            android:theme="@style/RatingBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating_in_text"
+            style="@style/InfoItemView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_80"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintEnd_toEndOf="@+id/rating_bar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0/5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_height"
+        android:layout_marginTop="@dimen/normal_12"
+        android:alpha="0.3"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_description" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey1">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey1"
+            app:elevation="0dp">
+
+            <include
+                android:id="@+id/settings_toolbar"
+                layout="@layout/toolbar" />
+
+            <TextView
+                android:id="@+id/settings_label_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/horizontal_offer_item_margin"
+                android:layout_marginTop="10dp"
+                android:text="@string/settings"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_28"
+                app:layout_constraintTop_toBottomOf="@+id/settings_toolbar" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/normal_24"
+                    android:paddingHorizontal="@dimen/horizontal_offer_item_margin">
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.TextSwitcher
+                        android:id="@+id/settings_face_switch"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/text_switcher_height"
+                        android:layout_marginTop="@dimen/normal_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:leftText="@string/physical_face"
+                        app:rightText="@string/ur_face" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/settings_tab_layout"
+                        style="@style/Widget.Sandbase.TabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_24"
+                        app:layout_constraintTop_toBottomOf="@id/settings_face_switch"
+                        app:tabMode="scrollable" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/settings_view_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/normal_24"
+                        app:layout_constraintTop_toBottomOf="@id/settings_tab_layout" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/large_88"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <Button
+                    android:id="@+id/edit_data_button"
+                    style="@style/Button.Default.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/large_64"
+                    android:layout_marginHorizontal="@dimen/large_40"
+                    android:layout_marginTop="@dimen/normal_16"
+                    android:text="@string/edit_data" />
+
+                <Button
+                    android:id="@+id/saveButton"
+                    style="@style/Button.Default.Orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/large_64"
+                    android:layout_marginStart="@dimen/normal_26"
+                    android:layout_marginEnd="@dimen/small_8"
+                    android:layout_marginTop="@dimen/normal_16"
+                    android:layout_weight="1"
+                    android:text="@string/save" />
+                <Button
+                    android:id="@+id/undoChangesButton"
+                    style="@style/Button.Default.White"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/large_64"
+                    android:layout_marginEnd="@dimen/normal_26"
+                    android:layout_marginStart="@dimen/small_8"
+                    android:layout_marginTop="@dimen/normal_16"
+                    android:layout_weight="1"
+                    android:text="@string/cancel" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

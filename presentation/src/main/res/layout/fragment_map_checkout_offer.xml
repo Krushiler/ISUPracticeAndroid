@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.bravedeveloper.sandbase.presentation.orderinfo.map.MapWithMarkerOffset
+            android:id="@+id/checkoutMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/checkoutBackFab"
+        style="@style/Widget.Sandbase.FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_margin="@dimen/normal_16"
+        android:src="@drawable/ic_backspace"
+        app:layout_dodgeInsetEdges="top"
+        app:shapeAppearanceOverlay="@drawable/background_dialog_white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/checkoutGeoFab"
+        style="@style/Widget.Sandbase.FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="@dimen/normal_16"
+        android:src="@drawable/ic_geo_mini"
+        app:layout_dodgeInsetEdges="bottom"
+        app:shapeAppearanceOverlay="@drawable/background_dialog_white" />
+
+    <FrameLayout
+        android:id="@+id/checkoutBottomSheet"
+        style="@style/Widget.Sandbase.BottomSheetView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:layout_insetEdge="bottom">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollOrderCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:background="@drawable/background_bottom_sheet">
+
+            <LinearLayout
+                android:id="@+id/layout_order_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:clipChildren="false"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/checkoutBottomSheetConstraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"
+                    android:paddingHorizontal="@dimen/normal_24">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/checkoutAdressLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:backgroundTint="@color/grey1"
+                        android:hint="@string/address"
+                        app:boxStrokeWidth="0dp"
+                        android:textColorHint="@color/gray_dark"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:expandedHintEnabled="false"
+                        app:hintTextAppearance="@style/DialogContentHint"
+                        app:hintTextColor="@color/gray_dark"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/checkoutAdressEditText"
+                            style="@style/DialogContent"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/large_80"
+                            android:background="@drawable/background_text_input_edit_text"
+                            android:inputType="text"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_18" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/checkoutAddressListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:divider="@android:color/transparent"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutAdressLayout" />
+
+                    <Spinner
+                        android:id="@+id/checkoutMaterialSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/large_56"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:background="@drawable/background_cargo_spinner"
+                        android:popupBackground="@drawable/background_filter_spinner_popup"
+                        android:popupTheme="@style/SpinnerDropDown"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutAdressLayout" />
+
+                    <Spinner
+                        android:id="@+id/checkoutUndertypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/large_56"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:background="@drawable/background_cargo_spinner"
+                        android:popupBackground="@drawable/background_filter_spinner_popup"
+                        android:popupTheme="@style/SpinnerDropDown"
+                        android:spinnerMode="dropdown"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutMaterialSpinner" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/checkoutSizeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:orientation="horizontal"
+                        android:clipChildren="false"
+                        android:clipToPadding="false"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutUndertypeSpinner">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/checkoutSizeEditTextLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/large_56"
+                            android:layout_marginEnd="@dimen/small_4"
+                            android:layout_weight="1"
+                            android:backgroundTint="@drawable/background_text_input_size"
+                            android:hint="@string/size"
+                            app:boxStrokeWidth="0dp"
+                            android:textColorHint="@color/gray_dark"
+                            app:boxStrokeWidthFocused="0dp"
+                            app:hintTextColor="@color/white"
+                            android:clipToPadding="false"
+                            android:clipChildren="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/guideline_center"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/checkoutSizeEditText"
+                                style="@style/DialogContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/background_text_input_edit_text"
+                                android:inputType="number"
+                                android:textSize="@dimen/text_16"
+                                android:textColor="@color/black"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <androidx.constraintlayout.widget.Guideline
+                            android:id="@+id/guideline_center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            app:layout_constraintGuide_percent="0.5" />
+
+                        <Spinner
+                            android:id="@+id/checkoutSizeTypeSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/large_56"
+                            android:layout_marginStart="@dimen/small_4"
+                            android:background="@drawable/background_cargo_spinner"
+                            android:popupBackground="@drawable/background_filter_spinner_popup"
+                            android:popupTheme="@style/SpinnerDropDown"
+                            android:spinnerMode="dropdown"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/guideline_center"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/checkoutDateTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/large_56"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_text_view_date"
+                        android:fontFamily="@font/weblysleekuil"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/normal_16"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_18"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutSizeLayout"
+                        tools:text="12.04.20" />
+
+                    <CalendarView
+                        android:id="@+id/checkoutDatePicker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/small_8"
+                        android:theme="@style/Widget.Sandbase.CalendarView"
+                        android:weekDayTextAppearance="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutDateTextView" />
+
+
+                    <TextView
+                        android:id="@+id/checkoutTimeTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/large_56"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_text_view_time"
+                        android:fontFamily="@font/weblysleekuil"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/normal_16"
+                        android:text="с 8:00 до 14:00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_18"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutDatePicker" />
+
+                    <com.shawnlin.numberpicker.NumberPicker
+                        android:id="@+id/checkoutTimePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:theme="@style/Widget.Sandbase.NumberPicker"
+                        android:visibility="gone"
+                        app:layout_constraintTop_toBottomOf="@+id/checkoutTimeTextView"
+                        app:np_dividerColor="@color/np_divider_color"
+                        app:np_itemSpacing="@dimen/small_10"
+                        app:np_max="1"
+                        app:np_min="0"
+                        app:np_selectedTextSize="@dimen/large_40"
+                        app:np_textSize="@dimen/large_40"
+                        app:np_typeface="@string/checkout_map_number_picker_font"
+                        />
+
+                    <EditText
+                        android:id="@+id/checkoutCommentaryEditText"
+                        style="@style/Widget.Sandbase.EditText.Default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/normal_16"
+                        android:inputType="textMultiLine"
+                        android:hint="@string/comment_max_120_length"
+                        android:textColorHint="@color/black"
+                        android:maxLength="120"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutTimePicker" />
+
+                    <TextView
+                        android:id="@+id/checkoutLettersLeft"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/afforded_item_margin_top_small"
+                        android:backgroundTint="@color/gray_background2"
+                        android:textColor="@color/grey5"
+                        android:textSize="@dimen/text_18"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutCommentaryEditText" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/checkoutButton"
+                        style="@style/Material.OrangeButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/normal_16"
+                        android:background="@drawable/background_orange_button"
+                        android:backgroundTint="@color/orange_dark"
+                        android:text="@string/checkout"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/checkoutLettersLeft" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

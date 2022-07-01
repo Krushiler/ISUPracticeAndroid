@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dialog_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_26"
+        android:layout_marginTop="@dimen/normal_32">
+
+        <TextView
+            style="@style/DialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/leave_feedback"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16" />
+
+        <ImageButton
+            android:id="@+id/cancellationCrossImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="@android:color/transparent"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/ic_cancel" />
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_26"
+        android:fontFamily="@font/weblysleekuil"
+        android:text="@string/if_order_delivered"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_14" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_18">
+
+        <RadioButton
+            android:id="@+id/dialog_feedback_radio_button_order_completed"
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/small_8"
+            android:text="@string/yes" />
+
+        <RadioButton
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:paddingStart="@dimen/small_8"
+            android:text="@string/no" />
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_26"
+        android:fontFamily="@font/weblysleekuil"
+        android:text="@string/evaluate_seller"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_14" />
+
+    <RatingBar
+        android:id="@+id/dialog_evaluate_rating_bar_buyer"
+        style="@style/Widget.Sandbase.RatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/normal_32"
+        android:layout_marginStart="@dimen/normal_16"
+        android:isIndicator="false"
+        android:rating="0"
+        android:layout_marginTop="@dimen/normal_16" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_20"
+        android:backgroundTint="@color/grey1"
+        android:hint="@string/comment_optional"
+        android:textColorHint="@color/gray_dark"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/DialogContentHint"
+        app:hintTextColor="@color/gray_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEditText"
+            style="@style/DialogContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_80"
+            android:background="@drawable/background_text_input_edit_text_grey"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_dialog_evaluate_buyer_confirm"
+        style="@style/DialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_24"
+        android:layout_marginBottom="@dimen/normal_32"
+        android:background="@drawable/background_dialog_orange_button"
+        android:paddingVertical="@dimen/normal_16"
+        android:text="@string/send"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16" />
+
+</LinearLayout>

@@ -1,0 +1,200 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/CardViewContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/normal_16"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/afforded_order_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/afforded_order"
+            android:maxWidth="@dimen/max_afforded_order_field_width"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/small_8"
+            android:textSize="@dimen/text_16"
+            android:textColor="@color/dark_gray"/>
+
+        <TextView
+            android:id="@+id/afforded_order_time_ago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/small_8"
+            tools:text="2 мин назад"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="@dimen/text_16"
+            android:textColor="@color/dark_gray"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/order_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_20"
+            android:layout_marginVertical="@dimen/normal_24"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afforded_order_title">
+
+            <ImageView
+                android:id="@+id/order_type_and_weight_img"
+                android:layout_width="@dimen/image_textview_size"
+                android:layout_height="@dimen/image_textview_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_box" />
+            <TextView
+                android:id="@+id/order_type_and_weight_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Грунт, 1 тонна"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/large_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintTop_toTopOf="@+id/order_type_and_weight_img" />
+            <View
+                android:id="@+id/afforded_item_divider1"
+                style="@style/HorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/order_type_and_weight_tv"/>
+
+            <ImageView
+                android:id="@+id/order_geo_position_img"
+                android:layout_width="@dimen/image_textview_size"
+                android:layout_height="@dimen/image_textview_size"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/afforded_item_divider1"
+                android:layout_marginTop="@dimen/normal_16"
+                app:srcCompat="@drawable/ic_geo_mini" />
+            <TextView
+                android:id="@+id/order_geo_position_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Грунт, 1 тонна"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/large_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintTop_toTopOf="@+id/order_geo_position_img" />
+            <View
+                android:id="@+id/afforded_item_divider2"
+                style="@style/HorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/order_geo_position_tv"/>
+            <ImageView
+                android:id="@+id/order_date_and_time_img"
+                android:layout_width="@dimen/image_textview_size"
+                android:layout_height="@dimen/image_textview_size"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@id/afforded_item_divider2"
+                app:srcCompat="@drawable/ic_time_mini" />
+            <TextView
+                android:id="@+id/order_date_and_time_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Грунт, 1 тонна"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="@dimen/large_40"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintTop_toTopOf="@+id/order_date_and_time_img" />
+            <View
+                android:id="@+id/afforded_item_divider3"
+                style="@style/HorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/order_date_and_time_tv"/>
+            <ImageView
+                android:id="@+id/order_buyer_name_img"
+                android:layout_width="@dimen/image_textview_size"
+                android:layout_height="@dimen/image_textview_size"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@id/afforded_item_divider3"
+                app:srcCompat="@drawable/ic_person" />
+            <TextView
+                android:id="@+id/order_buyer_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Грунт, 1 тонна"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/large_40"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="@dimen/text_16"
+                app:layout_constraintTop_toTopOf="@+id/order_buyer_name_img" />
+            <View
+                android:id="@+id/afforded_item_divider4"
+                style="@style/HorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/order_buyer_name_tv"/>
+            <ImageView
+                android:id="@+id/order_commentary_img"
+                android:layout_width="@dimen/image_textview_size"
+                android:layout_height="@dimen/image_textview_size"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/afforded_item_divider4"
+                app:srcCompat="@drawable/ic_commentary_mini" />
+
+            <com.bravedeveloper.sandbase.presentation.notifications.affordedOrder.ExpandableTextView
+                android:id="@+id/order_commentary_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_16"
+                android:layout_marginStart="@dimen/large_40"
+                android:gravity="top"
+                android:textColorHint="@color/grey4"
+                android:hint="@string/no_order_comment"
+                tools:text="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/order_commentary_img" />
+
+            <View
+                android:id="@+id/affordedItemDivider1"
+                style="@style/HorizontalDivider"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/normal_16"
+                app:layout_constraintTop_toBottomOf="@+id/order_type_and_weight_tv"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/order_final_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="@dimen/normal_12"
+            app:layout_constraintTop_toBottomOf="@+id/order_info"
+            app:layout_constraintEnd_toEndOf="@+id/order_info"
+            android:textSize="@dimen/text_18"
+            android:textStyle="bold"
+            tools:text="Итого: 126 000" />
+
+        <TextView
+            android:id="@+id/call_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_12"
+            android:layout_marginEnd="-20dp"
+            android:background="@drawable/tab_indicator"
+            android:text="@string/call"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:textColor="@color/orange_dark"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/order_final_cost"
+            app:layout_constraintTop_toBottomOf="@+id/order_final_cost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

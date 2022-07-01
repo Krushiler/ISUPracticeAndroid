@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+    app:cardCornerRadius="@dimen/normal_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/OrderItemTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/normal_16"
+            android:layout_marginBottom="28dp"
+            android:paddingStart="@dimen/normal_24"
+            tools:text="Желтый песок, 8 тонн" />
+
+        <TextView
+            android:id="@+id/tvGeolocation"
+            style="@style/OrderItemContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:drawablePadding="14dp"
+            app:drawableStartCompat="@drawable/ic_geo_transparent"
+            tools:text="Камбарская улица, 25, Ижевск, Удмурсткая Республика" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="@dimen/small_8" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            style="@style/OrderItemContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:drawablePadding="14dp"
+            android:drawableStart="@drawable/ic_date_transparent"
+            tools:text="28 сентября, 08:00-14:00" />
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="@dimen/small_8" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:layout_marginTop="@dimen/small_4">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="@dimen/large_100">
+
+                <ImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="@dimen/normal_24"
+                    android:layout_height="@dimen/normal_24"
+                    android:src="@drawable/photo_account" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.bravedeveloper.sandbase.presentation.notifications.affordedOrder.ExpandableTextView
+                android:id="@+id/tvCommentary"
+                style="@style/OrderItemContent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/normal_12"
+                android:layout_marginEnd="@dimen/normal_16"
+                android:gravity="center_vertical"
+                android:hint="@string/no_order_comment"
+                android:paddingTop="@dimen/small_4"
+                android:textColorHint="@color/grey4" />
+        </LinearLayout>
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginVertical="@dimen/small_8" />
+
+        <FrameLayout
+            android:id="@+id/expandMyResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+            <TextView
+                android:id="@+id/myRespondButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/normal_16"
+                android:fontFamily="@font/weblysleekuisb"
+                android:paddingVertical="@dimen/normal_16"
+                android:paddingStart="@dimen/small_8"
+                android:text="@string/my_response"
+                android:textAllCaps="false"
+                android:textColor="@color/orange_dark" />
+
+            <View
+                android:layout_width="28dp"
+                android:layout_height="@dimen/normal_24"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/normal_24"
+                android:background="@drawable/icon_expand_response_state"
+                android:textAllCaps="false"
+                android:textColor="@color/orange_dark"
+                app:cornerRadius="@dimen/large_100" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/myResponseExpandLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/normal_16"
+                android:backgroundTint="@color/grey1"
+                app:cardCornerRadius="@dimen/small_8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/normal_12">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/large_100">
+
+                        <ImageView
+                            android:id="@+id/ivSellerAvatar"
+                            android:layout_width="@dimen/normal_24"
+                            android:layout_height="@dimen/normal_24"
+                            android:src="@drawable/photo_account" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/expandedResponse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/small_8"
+                        android:hint="@string/no_order_comment_otklik" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/normal_16"
+                android:fontFamily="@font/weblysleekuisb"
+                android:textColor="@color/black"
+                tools:text="Итого: 163 000 Р" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/removeResponseButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/delete_response"
+            android:textAllCaps="false"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

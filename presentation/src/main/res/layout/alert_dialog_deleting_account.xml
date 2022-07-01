@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_32">
+
+        <TextView
+            android:id="@+id/deletingAccountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/normal_24"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/delete_account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_16"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cancellationCrossImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/normal_30"
+            android:background="@android:color/transparent"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/dark_gray" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/messageAboutTheSentCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_24"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/large_52"
+        android:fontFamily="@font/weblysleekuil"
+        android:text="@string/enter_the_code_sent_to_your_number"
+        android:textColor="@color/dark_gray"
+        android:textSize="@dimen/text_14" />
+
+    <EditText
+        android:id="@+id/codeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_56"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_16"
+        android:hint="@string/code_from_sms"
+        android:textColor="@color/black"
+        android:fontFamily="@font/weblysleekuisb"
+        android:inputType="number"
+        android:paddingStart="@dimen/normal_24"
+        android:textColorHint="@color/dark_gray"
+        android:background="@drawable/background_code_input_edit_text"
+        android:theme="@style/Theme.SandBase.TextInputEditText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/confirmationDeletingResponseButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_56"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_24"
+        android:layout_marginBottom="@dimen/normal_32"
+        android:background="@drawable/background_orange_button"
+        android:backgroundTint="@drawable/background_dialog_code_orange_button"
+        android:enabled="false"
+        android:fontFamily="@font/weblysleekuisb"
+        android:text="@string/delete_account"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_16" />
+</LinearLayout>

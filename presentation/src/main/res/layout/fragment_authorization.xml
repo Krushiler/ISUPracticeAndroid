@@ -1,0 +1,38 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/authorization_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/grey1">
+
+        <include
+            android:id="@+id/included_toolbar"
+            layout="@layout/toolbar" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/authorizationTabLayout"
+            style="@style/Widget.Sandbase.TabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tab_layout_height"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="-50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/included_toolbar"
+            app:tabGravity="center"
+            app:tabMode="fixed" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/authorizationViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/authorizationTabLayout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

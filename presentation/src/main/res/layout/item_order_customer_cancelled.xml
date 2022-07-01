@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/order_item_border_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_16"
+        android:fontFamily="@font/weblysleekuisb"
+        android:paddingStart="@dimen/normal_20"
+        android:paddingEnd="@dimen/normal_20"
+        android:textColor="@color/darkPurple1"
+        android:textSize="@dimen/order_recycler_title_text_size"
+        tools:text="Желтый песок, 8 тонн" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_12">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_20"
+            android:layout_marginTop="@dimen/small_4"
+            android:src="@drawable/ic_geo_mini" />
+
+        <TextView
+            android:id="@+id/tvGeolocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:layout_marginEnd="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="Камбарская улица, 25, Ижевск, Удмурсткая Республика" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_20"
+            android:src="@drawable/ic_time_mini" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="28 сентября, 08:00-14:00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_20"
+            android:layout_marginTop="@dimen/normal_16"
+            app:cardCornerRadius="@dimen/normal_16">
+
+            <ImageView
+                android:id="@+id/imageAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/photo_account" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <com.bravedeveloper.sandbase.presentation.notifications.affordedOrder.ExpandableTextView
+            android:id="@+id/tvCommentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:paddingEnd="@dimen/normal_16"
+            android:fontFamily="@font/weblysleekuil"
+            android:hint="@string/no_order_comment"
+            android:paddingTop="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey5"
+            android:textSize="@dimen/text_18" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_48"
+        android:layout_marginLeft="@dimen/small_4"
+        android:layout_marginTop="@dimen/normal_16"
+        android:layout_marginRight="@dimen/small_4"
+        android:layout_marginBottom="@dimen/small_4"
+        android:background="@drawable/order_bottom_button_background"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/respond"
+        android:textAllCaps="false"
+        android:textColor="@color/orange_dark"
+        android:textSize="@dimen/text_16">
+
+
+        <LinearLayout
+            android:id="@+id/checkedContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintEnd_toStartOf="@+id/commentContainer"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/normal_24"
+                android:layout_height="@dimen/normal_24"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/normal_16"
+                android:src="@drawable/ic_eye"/>
+            <TextView
+                android:id="@+id/textCountViews"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="@dimen/small_4"
+                android:layout_height="match_parent"
+                android:textColor="@color/darkPurple1"
+                android:gravity="center"
+                android:text="1000"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/commentContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintHorizontal_weight="1.2"
+            app:layout_constraintEnd_toStartOf="@+id/emptyContainer"
+            app:layout_constraintStart_toEndOf="@+id/checkedContainer">
+
+            <ImageView
+                android:layout_width="@dimen/normal_24"
+                android:layout_height="@dimen/normal_24"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/normal_16"
+                android:src="@drawable/ic_commentary_mini"/>
+            <TextView
+                android:id="@+id/textCountComments"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/small_4"
+                android:textColor="@color/darkPurple1"
+                android:gravity="center"
+                android:text="30"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/emptyContainer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintEnd_toStartOf="@+id/respondsButton"
+            app:layout_constraintStart_toEndOf="@+id/commentContainer"
+            android:orientation="horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/respondsButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/emptyContainer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/weblysleekuisb"
+                android:textColor="@color/orange_dark"
+                android:gravity="center"
+                android:text="@string/responses"/>
+
+            <ImageView
+                android:layout_width="@dimen/large_40"
+                android:layout_height="@dimen/normal_16"
+                android:layout_marginTop="@dimen/small_2"
+                android:src="@drawable/ic_arrow_front"/>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

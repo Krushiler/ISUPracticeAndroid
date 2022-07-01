@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_photo_account"
+        android:layout_width="@dimen/circle_size"
+        android:layout_height="@dimen/circle_size"
+        app:cardCornerRadius="@dimen/circle_size_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/photo_account" />
+
+        <ImageView
+            android:id="@+id/blur_image_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/change_avatar_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:padding="@dimen/normal_36"
+            android:src="@drawable/ic_change_photo"
+            android:visibility="gone" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/all_info_card_view"
+        style="@style/CardViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_photo_account">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal_18">
+
+            <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                android:id="@+id/surname_name_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/provide_full_name"
+                app:descriptionIsEditable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:titleText="@string/surname_name_patronymic" />
+
+            <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                android:id="@+id/email_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_12"
+                android:hint="@string/provide_email"
+                android:inputType="text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/surname_name_item"
+                app:titleText="@string/email"/>
+
+            <TextView
+                android:id="@+id/for_email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/email_item"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_14"
+                android:layout_marginTop="@dimen/small_4"
+                android:visibility="gone"
+                android:text="@string/for_email_message"/>
+            <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                android:id="@+id/phone_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_12"
+                android:digits="@string/number_digits"
+                android:hint="@string/provide_telephone"
+                android:inputType="phone"
+                app:dividerIsVisible="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/for_email_tv"
+                app:titleText="@string/phone" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/password_card_view"
+        style="@style/CardViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_8"
+        app:layout_constraintEnd_toEndOf="@+id/all_info_card_view"
+        app:layout_constraintStart_toStartOf="@+id/all_info_card_view"
+        app:layout_constraintTop_toBottomOf="@+id/all_info_card_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/editable_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/normal_18"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/current_password_tv"
+                style="@style/InfoItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/current_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/current_password_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/type_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey3"
+                android:textSize="@dimen/text_14"
+                android:maxLength="@integer/info_item_view_password_max_ems"
+                app:layout_constraintBottom_toBottomOf="@+id/current_password_tv"
+                app:layout_constraintEnd_toEndOf="@+id/current_password_tv"
+                app:layout_constraintTop_toTopOf="@+id/current_password_tv" />
+
+            <View
+                android:id="@+id/cp_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/normal_16"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/current_password_tv" />
+
+            <TextView
+                android:id="@+id/new_password_tv"
+                style="@style/InfoItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_16"
+                android:text="@string/new_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cp_divider" />
+
+            <EditText
+                android:id="@+id/new_password_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/type_password"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey3"
+                android:textSize="@dimen/text_14"
+                android:maxLength="@integer/info_item_view_password_max_ems"
+                app:layout_constraintBottom_toBottomOf="@+id/new_password_tv"
+                app:layout_constraintEnd_toEndOf="@+id/new_password_tv"
+                app:layout_constraintTop_toTopOf="@+id/new_password_tv" />
+
+            <View
+                android:id="@+id/np_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/divider_height"
+                android:layout_marginTop="@dimen/normal_16"
+                android:alpha="0.3"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/new_password_tv" />
+
+            <TextView
+                android:id="@+id/repeat_password_tv"
+                style="@style/InfoItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/normal_16"
+                android:text="@string/repeat_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/np_divider" />
+
+            <EditText
+                android:id="@+id/repeat_password_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:hint="@string/type_password_again"
+                android:inputType="textPassword"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey3"
+                android:textSize="@dimen/text_14"
+                android:maxLength="@integer/info_item_view_password_max_ems"
+                app:layout_constraintBottom_toBottomOf="@+id/repeat_password_tv"
+                app:layout_constraintEnd_toEndOf="@+id/repeat_password_tv"
+                app:layout_constraintTop_toTopOf="@+id/repeat_password_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal_18">
+
+            <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                android:id="@+id/password_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:dividerIsVisible="false"
+                app:descriptionTextSize="5sp"
+                app:hiddenStyle="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:titleText="@string/password" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/offer_limit_card_view"
+        style="@style/CardViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_8"
+        app:layout_constraintEnd_toEndOf="@+id/password_card_view"
+        app:layout_constraintStart_toStartOf="@+id/password_card_view"
+        app:layout_constraintTop_toBottomOf="@+id/password_card_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal_18">
+
+            <TextView
+                android:id="@+id/offer_limit_title_tv"
+                style="@style/InfoItemView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/responses_limit"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/offer_limit_count_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:textColor="@color/dark_gray"
+                android:textSize="@dimen/text_18"
+                app:layout_constraintBottom_toBottomOf="@+id/offer_limit_title_tv"
+                app:layout_constraintEnd_toEndOf="@+id/offer_limit_title_tv"
+                app:layout_constraintTop_toTopOf="@+id/offer_limit_title_tv"
+                tools:text="2/3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/create_offer_checkbox"
+        style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/checkbox_image_default_size"
+        android:layout_marginStart="@dimen/small_4"
+        android:layout_marginTop="@dimen/normal_24"
+        android:fontFamily="@font/weblysleekuisb"
+        android:text="@string/want_to_create_offers"
+        app:layout_constraintStart_toStartOf="@+id/offer_limit_card_view"
+        app:layout_constraintTop_toBottomOf="@+id/offer_limit_card_view" />
+
+    <TextView
+        android:id="@+id/delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_16"
+        android:text="@string/delete_account"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_18"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/password_card_view"
+        app:layout_constraintStart_toStartOf="@+id/password_card_view"
+        app:layout_constraintTop_toBottomOf="@+id/password_card_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

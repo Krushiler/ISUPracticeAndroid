@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_dialog_white"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/leaveResponseText"
+            style="@style/DialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_24"
+            android:layout_marginTop="34dp"
+            android:text="@string/leave_response"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.09"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/cancellationCrossImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/normal_30"
+            android:backgroundTint="@android:color/transparent"
+            android:padding="0dp"
+            android:src="@drawable/ic_cross"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/leaveResponseText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/gray_dark" />
+
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/costTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_24"
+        android:backgroundTint="@color/grey1"
+        android:hint="@string/cost"
+        android:textColorHint="@color/gray_dark"
+        app:boxStrokeWidthFocused="0dp"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/DialogContentHint"
+        app:hintTextColor="@color/gray_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/costEditText"
+            style="@style/DialogContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_80"
+            android:background="@drawable/background_text_input_edit_text"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/commentTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/small_8"
+        android:backgroundTint="@color/grey1"
+        android:hint="@string/comment_optional"
+        android:textColorHint="@color/gray_dark"
+        app:boxBackgroundMode="filled"
+        app:boxStrokeWidthFocused="0dp"
+        app:expandedHintEnabled="false"
+        app:hintTextAppearance="@style/DialogContentHint"
+        app:hintTextColor="@color/gray_dark">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/commentEditText"
+            style="@style/DialogContent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_80"
+            android:background="@drawable/background_text_input_edit_text"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/confirmationDeletingResponseButton"
+        style="@style/DialogButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_24"
+        android:layout_marginBottom="@dimen/normal_32"
+        android:background="@drawable/background_dialog_orange_button"
+        android:text="@string/respond"
+        android:textAllCaps="false"
+        android:textColor="@color/orange_button_text_color"
+        android:textSize="@dimen/text_16"
+        app:cornerRadius="@dimen/normal_16" />
+
+</LinearLayout>
+

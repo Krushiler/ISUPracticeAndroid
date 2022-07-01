@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notification_settings_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/normal_16"
+    android:layout_marginTop="@dimen/normal_24"
+    android:background="@drawable/background_seller_filter_scroll_view"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notificationTypeTextView"
+        style="@style/OrderItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_18"
+        android:text="@string/notification_type" />
+
+    <LinearLayout
+        android:id="@+id/notificationCheckBoxesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/normal_28"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_buyer_new_order"
+            style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/notification_new_order_buyer"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_buyer_reject"
+            style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/notification_reject_buyer"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_approve"
+            style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/notification_approve"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_reject"
+            style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/notification_reject"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkbox_notification_new_order"
+            style="@style/Widget.Sandbase.CheckBox.Material.Orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:fontFamily="@font/weblysleekuil"
+            android:text="@string/notification_new_order"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/HorizontalDivider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/small_2"
+        android:layout_marginHorizontal="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_18" />
+
+    <TextView
+        android:id="@+id/notificationFrequency"
+        style="@style/OrderItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_24"
+        android:layout_marginTop="@dimen/normal_18"
+        android:text="@string/notification_frequency" />
+
+    <RadioGroup
+        android:id="@+id/notificationFrequencyRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/normal_28"
+        android:layout_marginTop="@dimen/normal_24">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/notificationRadioMomentary"
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notification_momentary"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/notificationRadioPerHour"
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:text="@string/notification_per_hour"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/notificationRadioPer4Hours"
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:text="@string/notification_per_4_hours"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/notificationRadioPerDay"
+            style="@style/Widget.Sandbase.RadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_8"
+            android:text="@string/notification_per_day"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/notification_settings_cities_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            style="@style/HorizontalDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/small_2"
+            android:layout_marginHorizontal="@dimen/normal_24"
+            android:layout_marginTop="@dimen/normal_18" />
+
+        <TextView
+            android:id="@+id/notificationActualCitiesTextViewDecor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_24"
+            android:layout_marginTop="@dimen/normal_18"
+            android:fontFamily="@font/weblysleekuisb"
+            android:text="@string/notification_actual_cities"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/notification_settings_cities_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@drawable/selector_text_input_stroke_color">
+
+            <com.bravedeveloper.sandbase.presentation.settings.settingsnotifications.CustomAutoCompleteTextView
+                android:id="@+id/notification_settings_cities_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/normal_24"
+                android:layout_marginBottom="@dimen/normal_16"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/notification_settings_no_cities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_24"
+            android:text="@string/notification_cities_not_picked"
+            android:textColor="@color/grey3" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/notification_chip_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/normal_24"
+            android:layout_marginVertical="@dimen/small_8" />
+
+    </LinearLayout>
+
+</LinearLayout>

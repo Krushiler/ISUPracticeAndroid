@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/normal_16"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_address_search_hint"
+        style="@style/AddressSearchHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Россия, Удмуртская Республика, Ижевск," />
+
+    <TextView
+        android:id="@+id/tv_address_search_result"
+        style="@style/AddressSearchResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="ул. Красноармеская 84" />
+
+</LinearLayout>

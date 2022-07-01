@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_from_to"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_input">
+
+    <TextView
+        android:id="@+id/tv_from_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="6dp"
+        android:paddingStart="@dimen/normal_16"
+        android:textColor="@color/gray_dark"
+        android:fontFamily="@font/weblysleekuisb"
+        tools:text="от" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="6dp"
+        android:layout_gravity="end"
+        android:paddingEnd="@dimen/normal_16"
+        android:textColor="@color/black"
+        android:fontFamily="@font/weblysleekuisb"
+        tools:text="1" />
+
+</FrameLayout>

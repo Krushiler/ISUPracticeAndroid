@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/order_item_border_background"
+    android:orientation="vertical"
+    android:padding="@dimen/normal_16">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/large_40"
+            android:fontFamily="@font/weblysleekuisb"
+            android:textColor="@color/darkPurple1"
+            android:textSize="@dimen/order_recycler_title_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Желтый песок, 8 тонн" />
+
+        <ImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/order_recycler_title_text_size"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_12">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:layout_marginTop="@dimen/small_4"
+            android:src="@drawable/ic_geo_mini" />
+
+        <TextView
+            android:id="@+id/tvGeolocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="Камбарская улица, 25, Ижевск, Удмурсткая Республика" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:src="@drawable/ic_time_mini" />
+
+        <TextView
+            android:id="@+id/tvDateAndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:fontFamily="@font/weblysleekuil"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_18"
+            tools:text="28 сентября, 08:00-14:00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_4">
+
+        <ImageView
+            android:layout_width="@dimen/normal_24"
+            android:layout_height="@dimen/normal_24"
+            android:layout_marginStart="@dimen/normal_16"
+            android:layout_marginTop="@dimen/small_4"
+            android:src="@drawable/ic_commentary_mini" />
+
+        <com.bravedeveloper.sandbase.presentation.notifications.affordedOrder.ExpandableTextView
+            android:id="@+id/tvCommentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/normal_12"
+            android:fontFamily="@font/weblysleekuil"
+            android:hint="@string/no_order_comment"
+            android:paddingTop="@dimen/small_4"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey5"
+            android:textSize="@dimen/text_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_48"
+        android:layout_marginStart="@dimen/small_4"
+        android:layout_marginTop="@dimen/normal_16"
+        android:layout_marginEnd="@dimen/small_4"
+        android:layout_marginBottom="@dimen/small_4"
+        android:background="@drawable/order_bottom_button_background"
+        android:orientation="horizontal">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteRespondButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/weblysleekuisb"
+            android:gravity="center"
+            android:letterSpacing=".0"
+            android:text="@string/delete_response"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/respond_button_text_color"
+            android:textSize="@dimen/text_18" />
+
+        <ToggleButton
+            android:id="@+id/myResponseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/ic_arrow_drop_down"
+            android:enabled="true"
+            android:fontFamily="@font/weblysleekuisb"
+            android:gravity="center"
+            android:letterSpacing=".0"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_dark"
+            android:textOff="@string/my_response"
+            android:textOn="@string/my_response"
+            android:textSize="@dimen/text_18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myResponseLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small_8"
+        android:layout_marginTop="@dimen/normal_12"
+        android:layout_marginEnd="@dimen/small_8"
+        android:background="@drawable/background_grey"
+        android:divider="@drawable/ic_line"
+        android:dividerPadding="4dp"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/normal_24"
+                android:layout_height="@dimen/normal_24"
+                android:layout_marginStart="@dimen/normal_16"
+                android:layout_marginTop="@dimen/small_4"
+                android:src="@drawable/ic_commentary_mini" />
+
+            <TextView
+                android:id="@+id/commentaryResponse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_12"
+                android:layout_marginEnd="@dimen/normal_16"
+                android:fontFamily="@font/weblysleekuil"
+                android:hint="@string/no_order_comment"
+                android:paddingTop="@dimen/small_4"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey5"
+                android:textSize="@dimen/text_18" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/normal_24"
+                android:layout_height="@dimen/normal_24"
+                android:layout_marginStart="@dimen/normal_16"
+                android:layout_marginTop="@dimen/small_4"
+                android:src="@drawable/ic_rubble" />
+
+            <TextView
+                android:id="@+id/cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/normal_12"
+                android:layout_marginEnd="@dimen/normal_16"
+                android:fontFamily="@font/weblysleekuil"
+                android:paddingTop="@dimen/small_4"
+                android:text="100 000руб."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+</LinearLayout>

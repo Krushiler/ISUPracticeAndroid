@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:nestedScrollingEnabled="true"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_button_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:requiresFadingEdge="vertical"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/normal_16"
+        android:layout_height="0dp">
+    <androidx.cardview.widget.CardView
+        style="@style/CardViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:nestedScrollingEnabled="true"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:layout_marginBottom="@dimen/small_8"
+            android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/small_4">
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                        android:id="@+id/order_info_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:titleText="@string/status"
+                        android:layout_marginVertical="@dimen/small_8"
+                        app:maxEms="@integer/info_item_view_max_ems"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                        android:id="@+id/order_info_material_and_volume"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:titleText="@string/material"
+                        android:layout_marginVertical="@dimen/small_8"
+                        app:maxEms="@integer/info_item_view_max_ems"
+                        app:layout_constraintTop_toBottomOf="@+id/order_info_status"/>
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                        android:id="@+id/order_info_date_and_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        app:titleText="@string/date_and_time"
+                        android:layout_marginVertical="@dimen/small_8"
+                        app:maxEms="@integer/info_item_view_max_ems"
+                        app:layout_constraintTop_toBottomOf="@+id/order_info_material_and_volume"/>
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                        android:id="@+id/order_info_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginVertical="@dimen/small_8"
+                        app:maxEms="@integer/info_item_view_max_ems"
+                        app:layout_constraintTop_toBottomOf="@+id/order_info_date_and_time"
+                        app:titleText="@string/address" />
+
+                    <com.bravedeveloper.sandbase.presentation.base.views.InfoItemView
+                        android:id="@+id/order_info_commentary"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_marginTop="@dimen/small_8"
+                        app:layout_constraintTop_toBottomOf="@+id/order_info_address"
+                        app:dividerIsVisible="false"
+                        app:maxEms="@integer/info_item_view_max_ems"
+                        app:titleText="@string/comment" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout
+        android:id="@+id/cancel_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/large_88"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <Button
+            android:id="@+id/order_info_cancel_order_button"
+            style="@style/Button.Default.Orange"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/large_64"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="@dimen/normal_32"
+            android:text="@string/cancel_order"
+            android:textAllCaps="false"
+            tools:ignore="TextContrastCheck" />
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
